@@ -1,0 +1,28 @@
+{% extends "master.html" %}
+
+{% block title %}
+    Grocery List - SignUp
+{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <form method="post">
+            {% csrf_token %}
+            {% for field in form %}
+                <div>
+                    <div class="label">
+                        {{ field.label_tag }}
+                    </div>
+                    <div>
+                        {{ field }}
+                    </div>
+                </div>
+            {% endfor %}
+
+            <button type="submit">Create an account</button>
+            <span>
+                Already have an account? <a href="/login/">Log in</a>
+            </span>
+        </form>
+    </div>
+{% endblock %}

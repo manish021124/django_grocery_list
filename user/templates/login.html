@@ -1,0 +1,22 @@
+{% extends "master.html" %}
+
+{% block title %}
+    Grocery List - LogIn
+{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <form method="post">
+        {% csrf_token %}
+            <label for="username">Username</label>
+            <input type="text" name="username" required>
+            <label for="password">Password</label>
+            <input type="password" name="password" required>
+            
+            <button type="submit">Log In</button>
+            <span>
+                Don't have an account? <a href="/signup/">Sign up</a>
+            </span>
+        </form>
+    </div>
+{% endblock %}

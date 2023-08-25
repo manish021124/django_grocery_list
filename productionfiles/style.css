@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1E1E1E;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.top-header{
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.heading{
+    font-size: 30px;
+    font-weight: bolder;
+    padding-left: 30px;
+    width: 80%;
+}
+
+.heading a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.top-header ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.top-header li {
+    float: right;
+}
+  
+.top-header li a{
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+  
+.top-header li a:hover{
+    color: rgb(59, 245, 90);
+}
+
+.box {
+    width: 70%;
+    background-color: #fff;
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 1);
+}
+
+.messages {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.messages span {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.success {
+    background-color: rgb(59, 245, 90);
+    box-shadow: 0 2px 6px 0 rgb(59, 245, 90), 0 3px 15px 0 rgb(59, 245, 90);
+}
+
+.error {
+    background-color: rgb(248, 39, 39);
+    box-shadow: 0 2px 6px 0 rgb(248, 39, 39), 0 3px 15px 0 rgb(248, 39, 39);
+}
+
+
+
+.container {
+    width: 30%;
+    background-color: #fff;
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 1);
+}
+
+.container label {
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.container input {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: rgb(59, 245, 90);
+    border: none;
+    border-radius: 50px;
+    margin-top: 20px;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.header {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    padding: 30px;
+}
+
+.entry {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.input {
+    font-size: 24px;
+    color: rgb(100, 100, 100);
+    padding: 0 15px;
+    width: 70%;
+    height: 40px;
+    border: none;
+    background-color: rgb(198, 198, 201);
+    border-radius: 50px 0 0 50px;
+}
+
+.button {
+    background-color: rgb(59, 245, 90);
+    border: none;
+    border-radius: 0 50px 50px 0;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.grocery-list {
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: auto 40px 40px;
+}
+
+.list div {
+    margin: 10px;
+    font-size: 20px;
+}
+
+i {
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.fa-pen-to-square {
+    color: rgb(62, 62, 252);
+}
+
+.fa-trash {
+    color: rgb(248, 39, 39);
+}
+
+.media {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    margin-bottom: 50px;
+}
+
+.media img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.change-password {
+    margin-top: 30px;
+}
+
+.change-password a {
+    text-decoration: none;
+}
+
+.change-password a:hover,
+.delete-account a:hover {
+    text-decoration: underline;
+}
+
+.delete-account {
+    margin-top: 10px;
+}
+
+.delete-account a {
+    color: red;
+    text-decoration: none;
+}

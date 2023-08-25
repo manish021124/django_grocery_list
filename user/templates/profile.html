@@ -1,0 +1,44 @@
+{% extends "master.html" %}
+{% block title %} 
+  Grocery List - {{ user.username }}
+{% endblock title %} 
+
+{% block navbar %}
+  <li><a href="/logout">Logout</a></li>
+  <li><a href="/profile/">Profile</a></li>
+{% endblock %} 
+
+{% block content %}
+  <div class="container">
+    <div class="media">
+      <img class="account-img" src="{{ user.profile.image.url }}" />
+      <div class="media-body">
+        <h1 class="account-heading">{{ user.username }}</h1>
+        <p>{{ user.email }}</p>
+      </div>
+    </div>
+
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %} 
+      {% for field in u_form %}
+      <div>
+        <div class="label">{{ field.label_tag }}</div>
+        <div>{{ field }}</div>
+      </div>
+      {% endfor %} 
+      
+      {% for field in p_form %}
+      <div>
+        <div class="label">{{ field.label_tag }}</div>
+        <div>{{ field }}</div>
+      </div>
+      {% endfor %} 
+
+      <button type="submit">Update</button>
+    </form>
+
+    <div class="change-password"><a href="/change_password/">Change password</a></div>
+    <div class="delete-account"><a href="/deleteUser/{{ user.username }}">Delete the account.</a></div>
+
+  </div>
+{% endblock content %}

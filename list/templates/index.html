@@ -1,0 +1,39 @@
+{% extends "master.html" %}
+
+{% block title %}
+    Grocery List
+{% endblock title %}
+
+{% block navbar %}
+    {% if user.is_authenticated %}
+        <li><a href="logout">Logout</a></li>
+        <li><a href="/profile/">{{ user.username }}</a></li>
+    {% else %}
+        <li><a href="login">LogIn</a></li>
+        <li><a href="signup">SignUp</a></li>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <div class="box">
+        <div class="header">Lists</div>
+        <form class="entry" id="entry" action="addlist/" method="post">
+            {% csrf_token %}
+            <input type="text" name="listname" id="name" class="input" required>
+            <input type="submit" class="button" id="btn">
+        </form>
+        <div class="grocery-list">
+            <div class="list" id="list">
+                {% for x in mylist %}
+                    {% if x.user_id == user.id %}
+                        <div>
+                            {{ x.listname }}                        
+                        </div>
+                        <div><a href="edit/{{ x.id }}"><i class="fa-solid fa-pen-to-square"></i></a></div>
+                        <div><a href="deletelist/{{ x.id }}"><i class="fa-solid fa-trash"></i></a></div>
+                    {% endif %}
+                {% endfor %}                
+            </div>
+        </div>
+    </div>
+{% endblock %}
