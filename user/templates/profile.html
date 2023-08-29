@@ -4,8 +4,8 @@
 {% endblock title %} 
 
 {% block navbar %}
-  <li><a href="/logout">Logout</a></li>
-  <li><a href="/profile/">Profile</a></li>
+  <li><a href="/user/logout">Logout</a></li>
+  <li><a href="/user/profile/">Profile</a></li>
 {% endblock %} 
 
 {% block content %}
@@ -37,8 +37,8 @@
       <button type="submit">Update</button>
     </form>
 
-    <div class="change-password"><a href="/change_password/">Change password</a></div>
-    <div class="delete-account"><a href="/deleteUser/{{ user.username }}">Delete the account.</a></div>
+    <div class="change-password"><a href="/user/change_password/">Change password</a></div>
+    <div class="delete-account"><a href="/user/deleteUser/{{ user.username }}">Delete the account.</a></div>
 
   </div>
 {% endblock content %}
