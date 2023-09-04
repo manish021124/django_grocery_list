@@ -24,10 +24,10 @@ load_dotenv()
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-q@l$ifee9^0gs1yh&z4o^a9isj5dp5yo7cf$4u037guvj@n+&*'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['djangogrocerylist-production.up.railway.app', '127.0.0.1']
 
