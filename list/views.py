@@ -12,7 +12,7 @@ def index(request):
     context = {
         'mylist': mylist,
     }
-    return HttpResponse(template.render(context, request))  
+    return HttpResponse(template.render(context, request))
 
 
 @login_required
