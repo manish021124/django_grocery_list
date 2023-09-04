@@ -1,4 +1,4 @@
-{% comment %} {% extends "master.html" %}
+{% extends "master.html" %}
 {% block title %} 
   Grocery List - {{ user.username }}
 {% endblock title %} 
@@ -41,4 +41,4 @@
     <div class="delete-account"><a href="/user/deleteUser/{{ user.username }}">Delete the account.</a></div>
 
   </div>
-{% endblock content %} {% endcomment %}
+{% endblock content %}

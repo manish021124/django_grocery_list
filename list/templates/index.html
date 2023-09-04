@@ -6,11 +6,11 @@
 
 {% block navbar %}
     {% if user.is_authenticated %}
-        <li><a href="#">Logout</a></li>
-        <li><a href="#">{{ user.username }}</a></li>
+        <li><a href="/user/logout">Logout</a></li>
+        <li><a href="/user/profile/">{{ user.username }}</a></li>
     {% else %}
-        <li><a href="#">LogIn</a></li>
-        <li><a href="#">SignUp</a></li>
+        <li><a href="/user/login">LogIn</a></li>
+        <li><a href="/user/signup">SignUp</a></li>
     {% endif %}
 {% endblock %}
 
@@ -29,8 +29,8 @@
                         <div>
                             {{ x.listname }}                        
                         </div>
-                        <div><a href="#"><i class="fa-solid fa-pen-to-square"></i></a></div>
-                        <div><a href="#"><i class="fa-solid fa-trash"></i></a></div>
+                        <div><a href="edit/{{ x.id }}"><i class="fa-solid fa-pen-to-square"></i></a></div>
+                        <div><a href="deletelist/{{ x.id }}"><i class="fa-solid fa-trash"></i></a></div>
                     {% endif %}
                 {% endfor %}                
             </div>
