@@ -7,12 +7,15 @@ from django.contrib.auth.decorators import login_required
 
 
 def index(request):
-    mylist = List.objects.all().values()
-    template = loader.get_template('index.html')
-    context = {
-        'mylist': mylist,
-    }
-    return HttpResponse(template.render(context, request))
+    if request.user.is_authenticated:
+        mylist = List.objects.all().values()
+        template = loader.get_template('index.html')
+        context = {
+            'mylist': mylist,
+        }
+        return HttpResponse(template.render(context, request))
+    else:
+        return redirect('index')
 
 
 @login_required
