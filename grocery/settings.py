@@ -27,7 +27,7 @@ load_dotenv()
 SECRET_KEY = 'django-insecure-q@l$ifee9^0gs1yh&z4o^a9isj5dp5yo7cf$4u037guvj@n+&*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['djangogrocerylist-production.up.railway.app', '127.0.0.1']
 
@@ -134,8 +134,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_URL = 'user/login'
 
-CSRF_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
 
-SESSION_COOKIE_SECURE = True
+# SESSION_COOKIE_SECURE = True
 
-SECURE_SSL_REDIRECT = True
+# SECURE_SSL_REDIRECT = True
