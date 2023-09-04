@@ -31,7 +31,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['djangogrocerylist-production.up.railway.app', '127.0.0.1']
 
-CSRF_TRUSTED_ORIGINS = ['https://djangogrocerylist-production.up.railway.app/']
+CSRF_TRUSTED_ORIGINS = ['https://djangogrocerylist-production.up.railway.app/', 'https://www.djangogrocerylist-production.up.railway.app/']
 # Application definition
 
 INSTALLED_APPS = [
