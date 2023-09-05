@@ -22,7 +22,7 @@ def signup(request):
             if form.is_valid():
                 form.save()
                 messages.success(request, "Congratulation! You have created an account successfully. Pleae log in to continue.")
-                return redirect('user/login')
+                return redirect('login')
                 
         context = {'form': form}
         return render(request, 'signup.html', context)
