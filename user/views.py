@@ -15,7 +15,7 @@ def signup(request):
     if request.user.is_authenticated:
         return redirect('index')
     else:        
-        # form = CreateUserForm()
+        form = CreateUserForm(request.POST)
 
         if request.method == 'POST':
             form = CreateUserForm(request.POST)
