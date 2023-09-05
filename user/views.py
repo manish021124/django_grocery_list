@@ -15,7 +15,7 @@ def signup(request):
     if request.user.is_authenticated:
         return redirect('index')
     else:        
-        form = CreateUserForm(request.POST)
+        form = CreateUserForm()
 
         if request.method == 'POST':
             form = CreateUserForm(request.POST)
@@ -23,6 +23,8 @@ def signup(request):
                 form.save()
                 messages.success(request, "Congratulation! You have created an account successfully. Pleae log in to continue.")
                 return redirect('login')
+        else:
+            form = CreateUserForm()
                 
         context = {'form': form}
         return render(request, 'signup.html', context)
