@@ -24,8 +24,7 @@ def signup(request):
         else:        
             form = CreateUserForm()
                 
-        context = {'form': form}
-        return render(request, 'signup.html', context)
+        return render(request, 'signup.html', {'form': form})
 
 
 def loginPage(request):
