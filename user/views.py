@@ -18,10 +18,9 @@ def signup(request):
         if request.method == 'POST':
             form = CreateUserForm(request.POST)
             if form.is_valid():
-                user = form.save()
-                auth_login(request, user)
+                form.save()
                 messages.success(request, "Congratulation! You have created an account successfully. Pleae log in to continue.")
-                return redirect('index')
+                return redirect('login')
         else:        
             form = CreateUserForm()
                 
