@@ -17,8 +17,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 from dotenv import load_dotenv
 import os
+import dj_database_url
 
 load_dotenv()
+
+DATABASE_URL = 'postgresql://postgres:vm3kHHh7gWYNh6nR02Iu@containers-us-west-36.railway.app:5720/railway'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -81,10 +84,7 @@ WSGI_APPLICATION = 'grocery.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(default=DATABASE_URL, conn_max_age=500),
 }
 
 # Password validation
@@ -140,7 +140,3 @@ CSRF_COOKIE_SECURE = True
 # SESSION_COOKIE_SECURE = True
 
 # SECURE_SSL_REDIRECT = True
-
-import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
